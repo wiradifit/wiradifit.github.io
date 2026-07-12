@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Prawira Hadi Fitrajaya — Senior iOS Engineer</title>
+<meta name="description" content="Senior iOS Engineer with 6+ years across iOS, fintech product engineering, and data analytics. Architecting the US Stocks trading module at Ajaib — real-time markets, TCA architecture, and high-performance trading flows." />
+<meta name="author" content="Prawira Hadi Fitrajaya" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Prawira Hadi Fitrajaya — Senior iOS Engineer" />
+<meta property="og:description" content="Architecting real-time trading experiences on iOS. US Stocks · Options · Derivatives at Ajaib." />
+<meta property="og:url" content="https://wiradifit.github.io" />
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%23050607'/%3E%3Cpath d='M20 62 L38 44 L52 56 L80 30' fill='none' stroke='%2334f5c5' stroke-width='8' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='80' cy='30' r='7' fill='%2334f5c5'/%3E%3C/svg%3E" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- Grain + mesh overlays (fixed, non-interactive) -->
+<div class="mesh" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
+
+<!-- Scroll progress -->
+<div class="scroll-progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+<!-- Floating glass nav -->
+<header class="nav" id="nav">
+  <a href="#top" class="nav__brand" aria-label="Home">
+    <span class="nav__mark" aria-hidden="true"></span>
+    <span class="nav__name">Prawira<span class="dim">.dev</span></span>
+  </a>
+  <nav class="nav__links" aria-label="Primary">
+    <a href="#work">Work</a>
+    <a href="#experience">Experience</a>
+    <a href="#writing">Writing</a>
+    <a href="#stack">Stack</a>
+    <a href="#contact" class="nav__cta">
+      Contact
+      <span class="nav__cta-ico" aria-hidden="true">→</span>
+    </a>
+  </nav>
+  <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span>
+  </button>
+</header>
+
+<!-- Mobile overlay menu -->
+<div class="menu" id="menu" aria-hidden="true">
+  <a href="#work" data-i="1">Work</a>
+  <a href="#experience" data-i="2">Experience</a>
+  <a href="#writing" data-i="3">Writing</a>
+  <a href="#stack" data-i="4">Stack</a>
+  <a href="#contact" data-i="5">Contact</a>
+</div>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <canvas class="hero__canvas" id="chart" aria-hidden="true"></canvas>
+    <div class="hero__inner">
+      <span class="eyebrow reveal">Senior iOS Engineer · Jakarta, ID</span>
+      <h1 class="hero__title">
+        <span class="reveal" style="--d:.05s">Building the</span>
+        <span class="reveal grad" style="--d:.12s">markets</span>
+        <span class="reveal" style="--d:.19s">that move</span>
+        <span class="reveal" style="--d:.26s">on iOS.</span>
+      </h1>
+      <p class="hero__lede reveal" style="--d:.34s">
+        I’m <strong>Prawira Hadi Fitrajaya</strong> — architecting the US Stocks trading module at
+        <strong>Ajaib</strong> from the ground up. Real-time market data, sub-second order flows,
+        and a codebase engineers actually enjoy touching.
+      </p>
+      <div class="hero__actions reveal" style="--d:.42s">
+        <a href="#work" class="btn btn--primary">
+          <span>View selected work</span>
+          <span class="btn__ico" aria-hidden="true">↗</span>
+        </a>
+        <a href="#contact" class="btn btn--ghost">Get in touch</a>
+      </div>
+
+      <div class="hero__stats reveal" style="--d:.5s">
+        <div class="stat"><b data-count="6" data-suffix="+">6+</b><span>Years shipping</span></div>
+        <div class="stat"><b data-count="99" data-suffix="%">99%</b><span>Crash-free</span></div>
+        <div class="stat"><b data-count="2" data-prefix="P95 " data-suffix="s">2s</b><span>App start</span></div>
+        <div class="stat"><b data-count="90" data-suffix="%+">90%+</b><span>Test coverage</span></div>
+      </div>
+    </div>
+    <a href="#work" class="hero__scroll" aria-label="Scroll down">
+      <span class="hero__scroll-line" aria-hidden="true"></span>
+      Scroll
+    </a>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>Swift</span><span class="dot">•</span><span>SwiftUI</span><span class="dot">•</span><span>UIKit</span><span class="dot">•</span><span>TCA</span><span class="dot">•</span><span>WebSocket</span><span class="dot">•</span><span>Combine</span><span class="dot">•</span><span>Texture / AsyncDisplayKit</span><span class="dot">•</span><span>Firebase</span><span class="dot">•</span><span>Sentry</span><span class="dot">•</span><span>Mixpanel</span><span class="dot">•</span><span>SonarQube</span><span class="dot">•</span><span>XCTest</span><span class="dot">•</span>
+      <span>Swift</span><span class="dot">•</span><span>SwiftUI</span><span class="dot">•</span><span>UIKit</span><span class="dot">•</span><span>TCA</span><span class="dot">•</span><span>WebSocket</span><span class="dot">•</span><span>Combine</span><span class="dot">•</span><span>Texture / AsyncDisplayKit</span><span class="dot">•</span><span>Firebase</span><span class="dot">•</span><span>Sentry</span><span class="dot">•</span><span>Mixpanel</span><span class="dot">•</span><span>SonarQube</span><span class="dot">•</span><span>XCTest</span><span class="dot">•</span>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="section-head reveal">
+      <span class="tag">01 — Profile</span>
+      <h2>An engineering leader who ships, refactors, and mentors.</h2>
+    </div>
+    <div class="about__grid">
+      <p class="about__lead reveal">
+        Six-plus years across iOS development, fintech product engineering, and data analytics.
+        I lead the design and end-to-end delivery of a US Stocks module at one of Indonesia’s
+        largest trading platforms — while driving ID Stocks, Options, and Mutual Funds forward.
+      </p>
+      <p class="about__body reveal">
+        My roots in data analytics at Shopee and Ruangguru taught me to connect technical
+        decisions to business outcomes. Today I combine architectural vision with hands-on depth:
+        mentoring junior-to-mid iOS engineers, running technical interviews from junior through
+        senior, and raising the bar through code review.
+      </p>
+      <ul class="about__pills reveal">
+        <li>Real-time trading systems</li>
+        <li>TCA architecture</li>
+        <li>Performance engineering</li>
+        <li>Team mentorship</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- WORK / BENTO -->
+  <section class="work" id="work">
+    <div class="section-head reveal">
+      <span class="tag">02 — Selected Work</span>
+      <h2>Shipped on the Ajaib US&nbsp;Stocks platform.</h2>
+      <p class="section-sub">A trading surface serving ID Stocks, US Stocks, Options, Crypto &amp; Mutual Funds. Below: the features and systems I designed and delivered.</p>
+    </div>
+
+    <div class="bento">
+      <!-- Feature: TP/SL (hero card) -->
+      <article class="card card--xl reveal">
+        <div class="card__inner">
+          <div class="card__top">
+            <span class="card__kicker">Flagship feature · end-to-end</span>
+            <span class="card__badge live">Shipped</span>
+          </div>
+          <h3>Take Profit / Stop Loss</h3>
+          <p>Owned TP/SL from tech spec to production — core ViewModel logic, the Buy-Limit order section, and full portfolio-level create / edit / cancel flows. Automated risk management for every US Stocks trader.</p>
+          <div class="card__meta">
+            <span>Tech Spec</span><span>Core VM</span><span>Buy Limit</span><span>Portfolio TP/SL</span>
+          </div>
+          <div class="card__viz" aria-hidden="true">
+            <div class="tpsl">
+              <span class="tpsl__tp">TP&nbsp; +12.4%</span>
+              <span class="tpsl__price">AAPL&nbsp; $224.18</span>
+              <span class="tpsl__sl">SL&nbsp; −5.0%</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Amend Order -->
+      <article class="card reveal">
+        <div class="card__inner">
+          <span class="card__kicker">Order lifecycle</span>
+          <h3>Amend Order Flow</h3>
+          <p>Buy &amp; sell order amendment built on a unified TCA store — entry point, value carry-over &amp; calculation logic, and a gradual rollout config.</p>
+          <div class="card__meta"><span>Buy</span><span>Sell</span><span>Gradual rollout</span></div>
+        </div>
+      </article>
+
+      <!-- Real-time sockets -->
+      <article class="card reveal">
+        <div class="card__inner">
+          <span class="card__kicker">Real-time data</span>
+          <h3>Live Price Sockets</h3>
+          <p>Multi-source WebSocket pipeline for ID &amp; US markets. Fixed bid/ask freezes, out-of-hours socket behaviour, and built a SPY real-time chart proof-of-concept.</p>
+          <div class="card__meta"><span>WebSocket</span><span>Combine</span><span>SPY PoC</span></div>
+        </div>
+      </article>
+
+      <!-- TCA Refactor -->
+      <article class="card reveal">
+        <div class="card__inner">
+          <span class="card__kicker">Architecture</span>
+          <h3>TCA Store Unification</h3>
+          <p>Proposed and led a refactor unifying The Composable Architecture store patterns across the US Stocks app — plus a new navigation &amp; bottom-sheet system.</p>
+          <div class="card__meta"><span>Refactor</span><span>Navigation</span></div>
+        </div>
+      </article>
+
+      <!-- Observability (wide) -->
+      <article class="card card--wide reveal">
+        <div class="card__inner">
+          <span class="card__kicker">Observability</span>
+          <h3>Performance Instrumentation</h3>
+          <p>Sentry page-load tracking on the Detail &amp; Trade pages, base metrics for alerting, and Mixpanel event trackers — turning the trading surface observable and data-driven.</p>
+          <div class="card__meta"><span>Sentry</span><span>Mixpanel</span><span>P95 Alerting</span></div>
+        </div>
+      </article>
+
+      <!-- Stock Transfer -->
+      <article class="card reveal">
+        <div class="card__inner">
+          <span class="card__kicker">First-month win</span>
+          <h3>Stock Transfer</h3>
+          <p>Shipped the Stockbit stock-transfer flow within my first month — from spec and unit tests to production.</p>
+          <div class="card__meta"><span>Ship-fast</span><span>Unit tested</span></div>
+        </div>
+      </article>
+
+      <!-- Options / Derivatives -->
+      <article class="card reveal">
+        <div class="card__inner">
+          <span class="card__kicker">Products</span>
+          <h3>Options &amp; Derivatives</h3>
+          <p>US Stock Options and CFD groundwork — searchable options, expiry-with-timestamp handling, and contract detail refinements.</p>
+          <div class="card__meta"><span>Options</span><span>CFD</span></div>
+        </div>
+      </article>
+
+      <!-- Perf refactor stat card -->
+      <article class="card card--stat reveal">
+        <div class="card__inner">
+          <span class="card__kicker">Buy &amp; Sell refactor</span>
+          <div class="bigstat">
+            <span class="bigstat__num" data-count="21" data-suffix="%">21%</span>
+            <span class="bigstat__label">faster load</span>
+          </div>
+          <p class="bigstat__detail"><span class="mono">415ms → 328ms</span> on the core trading page, plus a more scalable architecture.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="experience" id="experience">
+    <div class="section-head reveal">
+      <span class="tag">03 — Trajectory</span>
+      <h2>From data analytics to trading systems.</h2>
+    </div>
+
+    <ol class="timeline">
+      <li class="tl reveal">
+        <div class="tl__rail"><span class="tl__dot current"></span></div>
+        <div class="tl__body">
+          <div class="tl__head">
+            <h3>Senior iOS Engineer I</h3>
+            <span class="tl__co">Ajaib</span>
+            <span class="tl__date">Mar 2024 — Present</span>
+          </div>
+          <p>Building and scaling one of Indonesia’s largest trading platforms. End-to-end feature ownership across ID/US Stocks, Options, Crypto &amp; Mutual Funds.</p>
+          <ul>
+            <li>Architected new modules — Stock Lite, Copy Trade, Bundle Trade, Fast Trade, Collateral — and advanced order types (GTC, Short Sell, Options, Limit).</li>
+            <li>P95 app-start of 2s and 99% crash-free on Ajaib &amp; Ajaib Alpha; code smells kept &lt;5% (SonarQube) with 90%+ coverage.</li>
+            <li>Boosted Mutual Funds rendering with Texture; built Firebase Remote Config marketing campaigns; mentor engineers and run technical interviews.</li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="tl reveal">
+        <div class="tl__rail"><span class="tl__dot"></span></div>
+        <div class="tl__body">
+          <div class="tl__head">
+            <h3>iOS Engineer</h3>
+            <span class="tl__co">Mister Aladin · MNC Group</span>
+            <span class="tl__date">Oct 2023 — Mar 2024</span>
+          </div>
+          <p>Led SwiftUI development of the Aladin Mall e-commerce app — SPM dependency management, URLSession networking, and Supabase persistence across the full delivery lifecycle.</p>
+        </div>
+      </li>
+
+      <li class="tl reveal">
+        <div class="tl__rail"><span class="tl__dot"></span></div>
+        <div class="tl__body">
+          <div class="tl__head">
+            <h3>iOS Developer</h3>
+            <span class="tl__co">The Fepi</span>
+            <span class="tl__date">Dec 2022 — Oct 2023</span>
+          </div>
+          <p>Owned the full iOS lifecycle to App Store release — UIKit components, Firebase backend integration, and Mixpanel analytics driving data-informed feature decisions.</p>
+        </div>
+      </li>
+
+      <li class="tl reveal">
+        <div class="tl__rail"><span class="tl__dot"></span></div>
+        <div class="tl__body">
+          <div class="tl__head">
+            <h3>iOS Engineer</h3>
+            <span class="tl__co">KoinWorks</span>
+            <span class="tl__date">Jun 2022 — Nov 2022</span>
+          </div>
+          <p>Shipped new KoinBisnis features on an MVVM stack, revamped UI, and integrated third-party liveness detection with unit-test coverage.</p>
+        </div>
+      </li>
+
+      <li class="tl reveal">
+        <div class="tl__rail"><span class="tl__dot"></span></div>
+        <div class="tl__body">
+          <div class="tl__head">
+            <h3>Consumer Research Associate</h3>
+            <span class="tl__co">Ruangguru</span>
+            <span class="tl__date">Nov 2021 — May 2022</span>
+          </div>
+          <p>Ran end-to-end research and NPS analysis, turning statistical findings into executable product and marketing recommendations.</p>
+        </div>
+      </li>
+
+      <li class="tl reveal">
+        <div class="tl__rail"><span class="tl__dot"></span></div>
+        <div class="tl__body">
+          <div class="tl__head">
+            <h3>Data Analytics &amp; Reporting — Retail Finance</h3>
+            <span class="tl__co">Shopee</span>
+            <span class="tl__date">Jul 2019 — Oct 2021</span>
+          </div>
+          <p>Built automated dashboards (Apps Script, Data Studio) and managed collection systems reaching ~1M users — where I learned to let data drive decisions.</p>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <!-- WRITING / TECH SPECS -->
+  <section class="writing" id="writing">
+    <div class="section-head reveal">
+      <span class="tag">04 — Technical Writing</span>
+      <h2>34 tech specs authored &amp; owned.</h2>
+      <p class="section-sub">I design before I build. A selection of the specifications I authored for the US Stocks platform.</p>
+    </div>
+    <div class="specs">
+      <a class="spec reveal"><span class="spec__no mono">SPEC-01</span><h4>US Stock TP/SL — Portfolio Create, Edit &amp; Cancel</h4></a>
+      <a class="spec reveal"><span class="spec__no mono">SPEC-02</span><h4>AjaibUSStock Architecture Refactor — Unifying TCA Store Patterns</h4></a>
+      <a class="spec reveal"><span class="spec__no mono">SPEC-03</span><h4>SPY Chart + WebSocket Real-Time Update — Proof of Concept</h4></a>
+      <a class="spec reveal"><span class="spec__no mono">SPEC-04</span><h4>USS Sentry Performance Instrumentation</h4></a>
+      <a class="spec reveal"><span class="spec__no mono">SPEC-05</span><h4>USStock Amend — Buy &amp; Sell Amendment Flow</h4></a>
+      <a class="spec reveal"><span class="spec__no mono">SPEC-06</span><h4>Trade Config per Asset — Fractional &amp; Order Types</h4></a>
+      <a class="spec reveal"><span class="spec__no mono">SPEC-07</span><h4>RDN as US Stocks Buying Power</h4></a>
+      <a class="spec reveal"><span class="spec__no mono">SPEC-08</span><h4>Bid / Ask Visibility on Closed Market</h4></a>
+      <a class="spec reveal"><span class="spec__no mono">SPEC-09</span><h4>rolloutManager (Unleash Key) List — USS &amp; USS Options</h4></a>
+      <a class="spec reveal"><span class="spec__no mono">SPEC-10</span><h4>Contract for Difference (CFD) — Commodity, Forex, Index</h4></a>
+    </div>
+  </section>
+
+  <!-- STACK -->
+  <section class="stack" id="stack">
+    <div class="section-head reveal">
+      <span class="tag">05 — Toolkit</span>
+      <h2>What I build with.</h2>
+    </div>
+    <div class="stack__grid">
+      <div class="stack__col reveal">
+        <h4>Languages &amp; UI</h4>
+        <ul><li>Swift</li><li>Objective-C</li><li>SwiftUI</li><li>UIKit</li><li>Texture / AsyncDisplayKit</li></ul>
+      </div>
+      <div class="stack__col reveal">
+        <h4>Architecture</h4>
+        <ul><li>TCA (Composable)</li><li>MVVM · MVVM-C</li><li>Combine</li><li>Swift Package Manager</li></ul>
+      </div>
+      <div class="stack__col reveal">
+        <h4>Real-time &amp; Data</h4>
+        <ul><li>WebSocket</li><li>URLSession</li><li>Firebase</li><li>Supabase</li></ul>
+      </div>
+      <div class="stack__col reveal">
+        <h4>Quality &amp; Insight</h4>
+        <ul><li>XCTest</li><li>SonarQube</li><li>Sentry</li><li>Mixpanel</li></ul>
+      </div>
+    </div>
+
+    <div class="edu reveal">
+      <div class="edu__item">
+        <span class="mono">EDU</span>
+        <div><b>B.Econ, Managerial Economics</b> — Universitas Mercu Buana · Cum Laude 3.63/4.00</div>
+      </div>
+      <div class="edu__item">
+        <span class="mono">CERT</span>
+        <div><b>iOS Engineering &amp; Full-Stack Web</b> — Binar / SYNRGY Academy · BCA scholarship</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="contact__inner reveal">
+      <span class="tag">06 — Let’s talk</span>
+      <h2>Have a hard problem<br />on iOS? Let’s build it.</h2>
+      <p>Open to engineering-leadership conversations, iOS architecture, and fintech product work.</p>
+      <div class="contact__links">
+        <a class="btn btn--primary" href="mailto:fitrajayaprawira@gmail.com">
+          <span>fitrajayaprawira@gmail.com</span>
+          <span class="btn__ico" aria-hidden="true">↗</span>
+        </a>
+        <a class="btn btn--ghost" href="https://www.linkedin.com/in/wiradifit" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn btn--ghost" href="https://github.com/wiradifit" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <span>© <span id="year">2026</span> Prawira Hadi Fitrajaya</span>
+  <span class="footer__mono mono">Built with Swift-level care — no framework required.</span>
+</footer>
+
+<script src="main.js" defer></script>
+</body>
+</html>
