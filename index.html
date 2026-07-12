@@ -2,10 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 <title>Prawira Hadi Fitrajaya — Senior iOS Engineer</title>
 <meta name="description" content="Senior iOS Engineer with 6+ years across iOS, fintech product engineering, and data analytics. Architecting the US Stocks trading module at Ajaib — real-time markets, TCA architecture, and high-performance trading flows." />
 <meta name="author" content="Prawira Hadi Fitrajaya" />
+<meta name="theme-color" content="#eaf0f8" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#05070d" media="(prefers-color-scheme: dark)" />
 
 <!-- Open Graph -->
 <meta property="og:type" content="website" />
@@ -13,45 +15,25 @@
 <meta property="og:description" content="Architecting real-time trading experiences on iOS. US Stocks · Options · Derivatives at Ajaib." />
 <meta property="og:url" content="https://wiradifit.github.io" />
 
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%23050607'/%3E%3Cpath d='M20 62 L38 44 L52 56 L80 30' fill='none' stroke='%2334f5c5' stroke-width='8' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='80' cy='30' r='7' fill='%2334f5c5'/%3E%3C/svg%3E" />
-
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%23007aff'/%3E%3Cpath d='M20 62 L38 44 L52 56 L80 30' fill='none' stroke='white' stroke-width='8' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='80' cy='30' r='7' fill='white'/%3E%3C/svg%3E" />
 <link rel="stylesheet" href="styles.css" />
-
-<script type="importmap">
-{
-  "imports": {
-    "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js",
-    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"
-  }
-}
-</script>
 </head>
 <body>
 
-<!-- Persistent WebGL "Liquidity Field" backdrop -->
-<canvas id="webgl" aria-hidden="true"></canvas>
-<!-- CSS mesh is the fallback when WebGL is unavailable / reduced-motion -->
-<div class="mesh" aria-hidden="true"></div>
+<!-- Liquid Glass wallpaper (refracted by frosted panels) -->
+<div class="wallpaper" aria-hidden="true"></div>
 <div class="grain" aria-hidden="true"></div>
-
-<!-- 3D loading indicator -->
-<div class="loader" id="loader" aria-hidden="true">
-  <div class="loader__mark"></div>
-  <span class="loader__txt mono">Loading liquidity field…</span>
-</div>
 
 <!-- Scroll progress -->
 <div class="scroll-progress" aria-hidden="true"><span id="progressBar"></span></div>
 
-<!-- Floating glass nav -->
-<header class="nav" id="nav">
+<!-- Floating glass capsule nav -->
+<header class="nav glass" id="nav">
   <a href="#top" class="nav__brand" aria-label="Home">
-    <span class="nav__mark" aria-hidden="true"></span>
-    <span class="nav__name">Prawira<span class="dim">.dev</span></span>
+    <span class="nav__mark" aria-hidden="true">
+      <svg viewBox="0 0 100 100" fill="none"><path d="M20 62 L38 44 L52 56 L80 30" stroke="white" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/><circle cx="80" cy="30" r="7.5" fill="white"/></svg>
+    </span>
+    <span class="nav__name">Prawira<span class="dim"> · iOS</span></span>
   </a>
   <nav class="nav__links" aria-label="Primary">
     <a href="#work">Work</a>
@@ -70,11 +52,11 @@
 
 <!-- Mobile overlay menu -->
 <div class="menu" id="menu" aria-hidden="true">
-  <a href="#work" data-i="1">Work</a>
-  <a href="#experience" data-i="2">Experience</a>
-  <a href="#writing" data-i="3">Writing</a>
-  <a href="#stack" data-i="4">Stack</a>
-  <a href="#contact" data-i="5">Contact</a>
+  <a href="#work" style="--i:1">Work</a>
+  <a href="#experience" style="--i:2">Experience</a>
+  <a href="#writing" style="--i:3">Writing</a>
+  <a href="#stack" style="--i:4">Stack</a>
+  <a href="#contact" style="--i:5">Contact</a>
 </div>
 
 <main id="top">
@@ -86,15 +68,14 @@
       <h1 class="hero__title">
         <span class="reveal" style="--d:.05s">Building the</span>
         <span class="reveal grad" style="--d:.12s">markets</span>
-        <span class="reveal" style="--d:.19s">that move</span>
-        <span class="reveal" style="--d:.26s">on iOS.</span>
+        <span class="reveal" style="--d:.19s">that move on iOS.</span>
       </h1>
-      <p class="hero__lede reveal" style="--d:.34s">
+      <p class="hero__lede reveal" style="--d:.3s">
         I’m <strong>Prawira Hadi Fitrajaya</strong> — architecting the US Stocks trading module at
         <strong>Ajaib</strong> from the ground up. Real-time market data, sub-second order flows,
         and a codebase engineers actually enjoy touching.
       </p>
-      <div class="hero__actions reveal" style="--d:.42s">
+      <div class="hero__actions reveal" style="--d:.38s">
         <a href="#work" class="btn btn--primary">
           <span>View selected work</span>
           <span class="btn__ico" aria-hidden="true">↗</span>
@@ -102,10 +83,10 @@
         <a href="#contact" class="btn btn--ghost">Get in touch</a>
       </div>
 
-      <div class="hero__stats reveal" style="--d:.5s">
+      <div class="hero__stats glass reveal" style="--d:.46s">
         <div class="stat"><b data-count="6" data-suffix="+">6+</b><span>Years shipping</span></div>
         <div class="stat"><b data-count="99" data-suffix="%">99%</b><span>Crash-free</span></div>
-        <div class="stat"><b data-count="2" data-prefix="P95 " data-suffix="s">2s</b><span>App start</span></div>
+        <div class="stat"><b data-count="2" data-prefix="" data-suffix="s">2s</b><span>P95 app start</span></div>
         <div class="stat"><b data-count="90" data-suffix="%+">90%+</b><span>Test coverage</span></div>
       </div>
     </div>
@@ -116,7 +97,7 @@
   </section>
 
   <!-- MARQUEE -->
-  <div class="marquee" aria-hidden="true">
+  <div class="marquee glass" aria-hidden="true">
     <div class="marquee__track">
       <span>Swift</span><span class="dot">•</span><span>SwiftUI</span><span class="dot">•</span><span>UIKit</span><span class="dot">•</span><span>TCA</span><span class="dot">•</span><span>WebSocket</span><span class="dot">•</span><span>Combine</span><span class="dot">•</span><span>Texture / AsyncDisplayKit</span><span class="dot">•</span><span>Firebase</span><span class="dot">•</span><span>Sentry</span><span class="dot">•</span><span>Mixpanel</span><span class="dot">•</span><span>SonarQube</span><span class="dot">•</span><span>XCTest</span><span class="dot">•</span>
       <span>Swift</span><span class="dot">•</span><span>SwiftUI</span><span class="dot">•</span><span>UIKit</span><span class="dot">•</span><span>TCA</span><span class="dot">•</span><span>WebSocket</span><span class="dot">•</span><span>Combine</span><span class="dot">•</span><span>Texture / AsyncDisplayKit</span><span class="dot">•</span><span>Firebase</span><span class="dot">•</span><span>Sentry</span><span class="dot">•</span><span>Mixpanel</span><span class="dot">•</span><span>SonarQube</span><span class="dot">•</span><span>XCTest</span><span class="dot">•</span>
@@ -126,7 +107,7 @@
   <!-- ABOUT -->
   <section class="about" id="about">
     <div class="section-head reveal">
-      <span class="tag">01 — Profile</span>
+      <span class="tag">Profile</span>
       <h2>An engineering leader who ships, refactors, and mentors.</h2>
     </div>
     <div class="about__grid">
@@ -153,14 +134,13 @@
   <!-- WORK / BENTO -->
   <section class="work" id="work">
     <div class="section-head reveal">
-      <span class="tag">02 — Selected Work</span>
+      <span class="tag">Selected Work</span>
       <h2>Shipped on the Ajaib US&nbsp;Stocks platform.</h2>
       <p class="section-sub">A trading surface serving ID Stocks, US Stocks, Options, Crypto &amp; Mutual Funds. Below: the features and systems I designed and delivered.</p>
     </div>
 
     <div class="bento">
-      <!-- Feature: TP/SL (hero card) -->
-      <article class="card card--xl reveal">
+      <article class="card card--xl glass reveal">
         <div class="card__inner">
           <div class="card__top">
             <span class="card__kicker">Flagship feature · end-to-end</span>
@@ -181,8 +161,7 @@
         </div>
       </article>
 
-      <!-- Amend Order -->
-      <article class="card reveal">
+      <article class="card glass reveal">
         <div class="card__inner">
           <span class="card__kicker">Order lifecycle</span>
           <h3>Amend Order Flow</h3>
@@ -191,8 +170,7 @@
         </div>
       </article>
 
-      <!-- Real-time sockets -->
-      <article class="card reveal">
+      <article class="card glass reveal">
         <div class="card__inner">
           <span class="card__kicker">Real-time data</span>
           <h3>Live Price Sockets</h3>
@@ -201,8 +179,7 @@
         </div>
       </article>
 
-      <!-- TCA Refactor -->
-      <article class="card reveal">
+      <article class="card glass reveal">
         <div class="card__inner">
           <span class="card__kicker">Architecture</span>
           <h3>TCA Store Unification</h3>
@@ -211,8 +188,7 @@
         </div>
       </article>
 
-      <!-- Observability (wide) -->
-      <article class="card card--wide reveal">
+      <article class="card card--wide glass reveal">
         <div class="card__inner">
           <span class="card__kicker">Observability</span>
           <h3>Performance Instrumentation</h3>
@@ -221,8 +197,7 @@
         </div>
       </article>
 
-      <!-- Stock Transfer -->
-      <article class="card reveal">
+      <article class="card glass reveal">
         <div class="card__inner">
           <span class="card__kicker">First-month win</span>
           <h3>Stock Transfer</h3>
@@ -231,8 +206,7 @@
         </div>
       </article>
 
-      <!-- Options / Derivatives -->
-      <article class="card reveal">
+      <article class="card glass reveal">
         <div class="card__inner">
           <span class="card__kicker">Products</span>
           <h3>Options &amp; Derivatives</h3>
@@ -241,8 +215,7 @@
         </div>
       </article>
 
-      <!-- Perf refactor stat card -->
-      <article class="card card--stat reveal">
+      <article class="card card--stat glass reveal">
         <div class="card__inner">
           <span class="card__kicker">Buy &amp; Sell refactor</span>
           <div class="bigstat">
@@ -258,14 +231,14 @@
   <!-- EXPERIENCE -->
   <section class="experience" id="experience">
     <div class="section-head reveal">
-      <span class="tag">03 — Trajectory</span>
+      <span class="tag">Trajectory</span>
       <h2>From data analytics to trading systems.</h2>
     </div>
 
     <ol class="timeline">
       <li class="tl reveal">
         <div class="tl__rail"><span class="tl__dot current"></span></div>
-        <div class="tl__body">
+        <div class="tl__body glass">
           <div class="tl__head">
             <h3>Senior iOS Engineer I</h3>
             <span class="tl__co">Ajaib</span>
@@ -282,7 +255,7 @@
 
       <li class="tl reveal">
         <div class="tl__rail"><span class="tl__dot"></span></div>
-        <div class="tl__body">
+        <div class="tl__body glass">
           <div class="tl__head">
             <h3>iOS Engineer</h3>
             <span class="tl__co">Mister Aladin · MNC Group</span>
@@ -294,7 +267,7 @@
 
       <li class="tl reveal">
         <div class="tl__rail"><span class="tl__dot"></span></div>
-        <div class="tl__body">
+        <div class="tl__body glass">
           <div class="tl__head">
             <h3>iOS Developer</h3>
             <span class="tl__co">The Fepi</span>
@@ -306,7 +279,7 @@
 
       <li class="tl reveal">
         <div class="tl__rail"><span class="tl__dot"></span></div>
-        <div class="tl__body">
+        <div class="tl__body glass">
           <div class="tl__head">
             <h3>iOS Engineer</h3>
             <span class="tl__co">KoinWorks</span>
@@ -318,7 +291,7 @@
 
       <li class="tl reveal">
         <div class="tl__rail"><span class="tl__dot"></span></div>
-        <div class="tl__body">
+        <div class="tl__body glass">
           <div class="tl__head">
             <h3>Consumer Research Associate</h3>
             <span class="tl__co">Ruangguru</span>
@@ -330,7 +303,7 @@
 
       <li class="tl reveal">
         <div class="tl__rail"><span class="tl__dot"></span></div>
-        <div class="tl__body">
+        <div class="tl__body glass">
           <div class="tl__head">
             <h3>Data Analytics &amp; Reporting — Retail Finance</h3>
             <span class="tl__co">Shopee</span>
@@ -345,55 +318,55 @@
   <!-- WRITING / TECH SPECS -->
   <section class="writing" id="writing">
     <div class="section-head reveal">
-      <span class="tag">04 — Technical Writing</span>
+      <span class="tag">Technical Writing</span>
       <h2>34 tech specs authored &amp; owned.</h2>
       <p class="section-sub">I design before I build. A selection of the specifications I authored for the US Stocks platform.</p>
     </div>
     <div class="specs">
-      <a class="spec reveal"><span class="spec__no mono">SPEC-01</span><h4>US Stock TP/SL — Portfolio Create, Edit &amp; Cancel</h4></a>
-      <a class="spec reveal"><span class="spec__no mono">SPEC-02</span><h4>AjaibUSStock Architecture Refactor — Unifying TCA Store Patterns</h4></a>
-      <a class="spec reveal"><span class="spec__no mono">SPEC-03</span><h4>SPY Chart + WebSocket Real-Time Update — Proof of Concept</h4></a>
-      <a class="spec reveal"><span class="spec__no mono">SPEC-04</span><h4>USS Sentry Performance Instrumentation</h4></a>
-      <a class="spec reveal"><span class="spec__no mono">SPEC-05</span><h4>USStock Amend — Buy &amp; Sell Amendment Flow</h4></a>
-      <a class="spec reveal"><span class="spec__no mono">SPEC-06</span><h4>Trade Config per Asset — Fractional &amp; Order Types</h4></a>
-      <a class="spec reveal"><span class="spec__no mono">SPEC-07</span><h4>RDN as US Stocks Buying Power</h4></a>
-      <a class="spec reveal"><span class="spec__no mono">SPEC-08</span><h4>Bid / Ask Visibility on Closed Market</h4></a>
-      <a class="spec reveal"><span class="spec__no mono">SPEC-09</span><h4>rolloutManager (Unleash Key) List — USS &amp; USS Options</h4></a>
-      <a class="spec reveal"><span class="spec__no mono">SPEC-10</span><h4>Contract for Difference (CFD) — Commodity, Forex, Index</h4></a>
+      <a class="spec glass reveal"><span class="spec__no mono">01</span><h4>US Stock TP/SL — Portfolio Create, Edit &amp; Cancel</h4></a>
+      <a class="spec glass reveal"><span class="spec__no mono">02</span><h4>AjaibUSStock Architecture Refactor — Unifying TCA Store Patterns</h4></a>
+      <a class="spec glass reveal"><span class="spec__no mono">03</span><h4>SPY Chart + WebSocket Real-Time Update — Proof of Concept</h4></a>
+      <a class="spec glass reveal"><span class="spec__no mono">04</span><h4>USS Sentry Performance Instrumentation</h4></a>
+      <a class="spec glass reveal"><span class="spec__no mono">05</span><h4>USStock Amend — Buy &amp; Sell Amendment Flow</h4></a>
+      <a class="spec glass reveal"><span class="spec__no mono">06</span><h4>Trade Config per Asset — Fractional &amp; Order Types</h4></a>
+      <a class="spec glass reveal"><span class="spec__no mono">07</span><h4>RDN as US Stocks Buying Power</h4></a>
+      <a class="spec glass reveal"><span class="spec__no mono">08</span><h4>Bid / Ask Visibility on Closed Market</h4></a>
+      <a class="spec glass reveal"><span class="spec__no mono">09</span><h4>rolloutManager (Unleash Key) List — USS &amp; USS Options</h4></a>
+      <a class="spec glass reveal"><span class="spec__no mono">10</span><h4>Contract for Difference (CFD) — Commodity, Forex, Index</h4></a>
     </div>
   </section>
 
   <!-- STACK -->
   <section class="stack" id="stack">
     <div class="section-head reveal">
-      <span class="tag">05 — Toolkit</span>
+      <span class="tag">Toolkit</span>
       <h2>What I build with.</h2>
     </div>
     <div class="stack__grid">
-      <div class="stack__col reveal">
+      <div class="stack__col glass reveal">
         <h4>Languages &amp; UI</h4>
         <ul><li>Swift</li><li>Objective-C</li><li>SwiftUI</li><li>UIKit</li><li>Texture / AsyncDisplayKit</li></ul>
       </div>
-      <div class="stack__col reveal">
+      <div class="stack__col glass reveal">
         <h4>Architecture</h4>
         <ul><li>TCA (Composable)</li><li>MVVM · MVVM-C</li><li>Combine</li><li>Swift Package Manager</li></ul>
       </div>
-      <div class="stack__col reveal">
+      <div class="stack__col glass reveal">
         <h4>Real-time &amp; Data</h4>
         <ul><li>WebSocket</li><li>URLSession</li><li>Firebase</li><li>Supabase</li></ul>
       </div>
-      <div class="stack__col reveal">
+      <div class="stack__col glass reveal">
         <h4>Quality &amp; Insight</h4>
         <ul><li>XCTest</li><li>SonarQube</li><li>Sentry</li><li>Mixpanel</li></ul>
       </div>
     </div>
 
-    <div class="edu reveal">
-      <div class="edu__item">
+    <div class="edu">
+      <div class="edu__item glass reveal">
         <span class="mono">EDU</span>
         <div><b>B.Econ, Managerial Economics</b> — Universitas Mercu Buana · Cum Laude 3.63/4.00</div>
       </div>
-      <div class="edu__item">
+      <div class="edu__item glass reveal">
         <span class="mono">CERT</span>
         <div><b>iOS Engineering &amp; Full-Stack Web</b> — Binar / SYNRGY Academy · BCA scholarship</div>
       </div>
@@ -402,9 +375,9 @@
 
   <!-- CONTACT -->
   <section class="contact" id="contact">
-    <div class="contact__inner reveal">
-      <span class="tag">06 — Let’s talk</span>
-      <h2>Have a hard problem<br />on iOS? Let’s build it.</h2>
+    <div class="contact__inner glass reveal">
+      <span class="tag">Let’s talk</span>
+      <h2>Have a hard problem on iOS? Let’s build it.</h2>
       <p>Open to engineering-leadership conversations, iOS architecture, and fintech product work.</p>
       <div class="contact__links">
         <a class="btn btn--primary" href="mailto:fitrajayaprawira@gmail.com">
@@ -421,10 +394,9 @@
 
 <footer class="footer">
   <span>© <span id="year">2026</span> Prawira Hadi Fitrajaya</span>
-  <span class="footer__mono mono">Built with Swift-level care — no framework required.</span>
+  <span class="footer__mono mono">Designed &amp; built with Liquid Glass — no framework required.</span>
 </footer>
 
 <script src="main.js" defer></script>
-<script type="module" src="scene.js"></script>
 </body>
 </html>
