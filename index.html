@@ -16,6 +16,8 @@
 <meta property="og:url" content="https://wiradifit.github.io" />
 
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%23007aff'/%3E%3Cpath d='M20 62 L38 44 L52 56 L80 30' fill='none' stroke='white' stroke-width='8' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='80' cy='30' r='7' fill='white'/%3E%3C/svg%3E" />
+
+<!-- Apple HIG system type: San Francisco (SF Pro) for text, New York (ui-serif) for editorial accents. No web fonts — system-native. -->
 <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -36,6 +38,7 @@
     <span class="nav__name">Prawira<span class="dim"> · iOS</span></span>
   </a>
   <nav class="nav__links" aria-label="Primary">
+    <a href="#focus">Focus</a>
     <a href="#work">Work</a>
     <a href="#experience">Experience</a>
     <a href="#writing">Writing</a>
@@ -67,7 +70,7 @@
       <span class="eyebrow reveal">Senior iOS Engineer · Jakarta, ID</span>
       <h1 class="hero__title">
         <span class="reveal" style="--d:.05s">Building the</span>
-        <span class="reveal grad" style="--d:.12s">markets</span>
+        <span class="reveal accent grad" style="--d:.12s">markets</span>
         <span class="reveal" style="--d:.19s">that move on iOS.</span>
       </h1>
       <p class="hero__lede reveal" style="--d:.3s">
@@ -90,6 +93,20 @@
         <div class="stat"><b data-count="90" data-suffix="%+">90%+</b><span>Test coverage</span></div>
       </div>
     </div>
+
+    <aside class="hero__portrait reveal" style="--d:.24s" aria-label="Prawira Hadi Fitrajaya">
+      <div class="portrait glass">
+        <img class="portrait__img" src="portrait.jpg" alt="Prawira Hadi Fitrajaya" onerror="this.remove()" />
+        <span class="portrait__mono" aria-hidden="true">PF</span>
+        <span class="portrait__eyebrow" aria-hidden="true">The Markets Engineer</span>
+        <span class="portrait__chip glass">
+          <span class="portrait__dot" aria-hidden="true"></span>
+          Open to iOS leadership
+        </span>
+        <span class="portrait__ticker glass mono" aria-hidden="true">AAPL&nbsp; $224.18&nbsp; <em>+1.2%</em></span>
+      </div>
+    </aside>
+
     <a href="#work" class="hero__scroll" aria-label="Scroll down">
       <span class="hero__scroll-line" aria-hidden="true"></span>
       Scroll
@@ -108,7 +125,7 @@
   <section class="about" id="about">
     <div class="section-head reveal">
       <span class="tag">Profile</span>
-      <h2>An engineering leader who ships, refactors, and mentors.</h2>
+      <h2>An engineering leader who ships, refactors, <span class="accent">&amp; mentors.</span></h2>
     </div>
     <div class="about__grid">
       <p class="about__lead reveal">
@@ -131,11 +148,92 @@
     </div>
   </section>
 
+  <!-- BIG-NUMBER STORYTELLING (editorial, ref: raymondchins.com stat reveals) -->
+  <section class="figures" id="figures">
+    <div class="figures__head reveal">
+      <span class="tag">By the numbers</span>
+      <h2>Six years shipping <span class="accent">production iOS at scale.</span></h2>
+    </div>
+    <div class="figures__grid">
+      <article class="figure reveal">
+        <span class="figure__num"><b data-count="99" data-suffix="%">99%</b></span>
+        <h3>Crash-free sessions</h3>
+        <p>Across Ajaib &amp; Ajaib Alpha — millions of trading sessions held to a 99% crash-free rate.</p>
+      </article>
+      <article class="figure reveal">
+        <span class="figure__num"><b data-count="34" data-suffix="">34</b></span>
+        <h3>Tech specs authored</h3>
+        <p>Designed before built — 34 specifications owned end-to-end for the US Stocks platform.</p>
+      </article>
+      <article class="figure reveal">
+        <span class="figure__num"><b data-count="21" data-suffix="%">21%</b></span>
+        <h3>Faster core trade page</h3>
+        <p><span class="mono">415ms → 328ms</span> on the buy/sell surface, on a more scalable architecture.</p>
+      </article>
+      <article class="figure reveal">
+        <span class="figure__num"><b data-count="90" data-suffix="%+">90%+</b></span>
+        <h3>Test coverage</h3>
+        <p>Code smells kept under 5% on SonarQube with 90%+ coverage across owned modules.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- FOCUS AREAS — numbered editorial list (ref: raymondchins.com topics) -->
+  <section class="topics" id="focus">
+    <div class="section-head reveal">
+      <span class="tag">Focus Areas</span>
+      <h2>Where I go <span class="accent">deep on iOS.</span></h2>
+      <p class="section-sub">Five domains I design, build, and mentor around — the substance behind the trading surface.</p>
+    </div>
+    <ol class="topic-list">
+      <li class="topic reveal glass">
+        <span class="topic__no mono">01</span>
+        <div class="topic__body">
+          <h3>Real-Time Trading Systems</h3>
+          <p>Multi-source WebSocket pipelines for ID &amp; US markets — bid/ask streams, out-of-hours behaviour, and live charting under sub-second latency.</p>
+        </div>
+        <span class="topic__tag">WebSocket · Combine</span>
+      </li>
+      <li class="topic reveal glass">
+        <span class="topic__no mono">02</span>
+        <div class="topic__body">
+          <h3>Composable Architecture</h3>
+          <p>Unifying TCA store patterns across the US Stocks app, plus navigation and bottom-sheet systems engineers actually enjoy extending.</p>
+        </div>
+        <span class="topic__tag">TCA · MVVM-C</span>
+      </li>
+      <li class="topic reveal glass">
+        <span class="topic__no mono">03</span>
+        <div class="topic__body">
+          <h3>Performance Engineering</h3>
+          <p>Trimming cold-start and render cost — Texture for heavy lists, P95 app-start of 2s, and measurable load wins on the core trade page.</p>
+        </div>
+        <span class="topic__tag">Texture · Instruments</span>
+      </li>
+      <li class="topic reveal glass">
+        <span class="topic__no mono">04</span>
+        <div class="topic__body">
+          <h3>Observability &amp; Insight</h3>
+          <p>Sentry page-load tracing, alerting baselines, and Mixpanel event design that turns a trading surface data-driven.</p>
+        </div>
+        <span class="topic__tag">Sentry · Mixpanel</span>
+      </li>
+      <li class="topic reveal glass">
+        <span class="topic__no mono">05</span>
+        <div class="topic__body">
+          <h3>Mentorship &amp; Craft</h3>
+          <p>Growing junior-to-mid iOS engineers, running technical interviews across levels, and raising the bar through review.</p>
+        </div>
+        <span class="topic__tag">Reviews · Interviews</span>
+      </li>
+    </ol>
+  </section>
+
   <!-- WORK / BENTO -->
   <section class="work" id="work">
     <div class="section-head reveal">
       <span class="tag">Selected Work</span>
-      <h2>Shipped on the Ajaib US&nbsp;Stocks platform.</h2>
+      <h2>Shipped on the Ajaib <span class="accent">US&nbsp;Stocks</span> platform.</h2>
       <p class="section-sub">A trading surface serving ID Stocks, US Stocks, Options, Crypto &amp; Mutual Funds. Below: the features and systems I designed and delivered.</p>
     </div>
 
@@ -232,7 +330,7 @@
   <section class="experience" id="experience">
     <div class="section-head reveal">
       <span class="tag">Trajectory</span>
-      <h2>From data analytics to trading systems.</h2>
+      <h2>From data analytics to <span class="accent">trading systems.</span></h2>
     </div>
 
     <ol class="timeline">
@@ -319,7 +417,7 @@
   <section class="writing" id="writing">
     <div class="section-head reveal">
       <span class="tag">Technical Writing</span>
-      <h2>34 tech specs authored &amp; owned.</h2>
+      <h2>34 tech specs <span class="accent">authored &amp; owned.</span></h2>
       <p class="section-sub">I design before I build. A selection of the specifications I authored for the US Stocks platform.</p>
     </div>
     <div class="specs">
@@ -340,7 +438,7 @@
   <section class="stack" id="stack">
     <div class="section-head reveal">
       <span class="tag">Toolkit</span>
-      <h2>What I build with.</h2>
+      <h2>What I <span class="accent">build with.</span></h2>
     </div>
     <div class="stack__grid">
       <div class="stack__col glass reveal">
@@ -377,7 +475,7 @@
   <section class="contact" id="contact">
     <div class="contact__inner glass reveal">
       <span class="tag">Let’s talk</span>
-      <h2>Have a hard problem on iOS? Let’s build it.</h2>
+      <h2>Have a hard problem on iOS? <span class="accent">Let’s build it.</span></h2>
       <p>Open to engineering-leadership conversations, iOS architecture, and fintech product work.</p>
       <div class="contact__links">
         <a class="btn btn--primary" href="mailto:fitrajayaprawira@gmail.com">
