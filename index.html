@@ -20,12 +20,29 @@
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
 <link rel="stylesheet" href="styles.css" />
+
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"
+  }
+}
+</script>
 </head>
 <body>
 
-<!-- Grain + mesh overlays (fixed, non-interactive) -->
+<!-- Persistent WebGL "Liquidity Field" backdrop -->
+<canvas id="webgl" aria-hidden="true"></canvas>
+<!-- CSS mesh is the fallback when WebGL is unavailable / reduced-motion -->
 <div class="mesh" aria-hidden="true"></div>
 <div class="grain" aria-hidden="true"></div>
+
+<!-- 3D loading indicator -->
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader__mark"></div>
+  <span class="loader__txt mono">Loading liquidity field…</span>
+</div>
 
 <!-- Scroll progress -->
 <div class="scroll-progress" aria-hidden="true"><span id="progressBar"></span></div>
@@ -64,7 +81,6 @@
 
   <!-- HERO -->
   <section class="hero">
-    <canvas class="hero__canvas" id="chart" aria-hidden="true"></canvas>
     <div class="hero__inner">
       <span class="eyebrow reveal">Senior iOS Engineer · Jakarta, ID</span>
       <h1 class="hero__title">
@@ -409,5 +425,6 @@
 </footer>
 
 <script src="main.js" defer></script>
+<script type="module" src="scene.js"></script>
 </body>
 </html>
