@@ -8,10 +8,9 @@ Live: https://wiradifit.github.io
 Static site. No build step, no dependencies — plain HTML, CSS, and vanilla JS,
 so GitHub Pages serves it directly.
 
-- `index.html` — content & structure
-- `styles.css` — "Ethereal Glass Trading Terminal" design system
-- `main.js` — scroll reveals, count-up stats, mobile menu, and the animated
-  Canvas 2D price chart in the hero (all GPU-friendly and `prefers-reduced-motion` aware)
+- `index.html` — content &amp; structure (Hero, About, Figures, Focus, Work with US &amp; ID Stock cards, Experience, Tech Specs, Stack, Side Projects, Contact)
+- `styles.css` — "Liquid Glass" design system, glass morphism, ambient wallpaper, light/dark adaptive
+- `main.js` — scroll reveals, count-up stats, mobile menu, pointer-reactive glass sheen, nav auto-hide
 
 ## Develop locally
 ```bash

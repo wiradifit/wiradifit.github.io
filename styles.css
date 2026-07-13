@@ -543,6 +543,29 @@ section { max-width: var(--maxw); margin: 0 auto; padding: 5rem 24px; }
 .edu__item b { color: var(--label); font-weight: 600; }
 
 /* =========================================================
+   SIDE PROJECTS — language-tagged cards
+   ========================================================= */
+.projects__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.proj {
+  display: flex; flex-direction: column; gap: 0.6rem;
+  border-radius: var(--r-panel); padding: 22px; cursor: pointer;
+  transition: transform 0.5s var(--ease), box-shadow 0.5s var(--ease);
+}
+.proj:hover { transform: translateY(-4px); }
+.proj__top { display: flex; align-items: center; justify-content: space-between; }
+.proj__lang { font-size: var(--t-caption); font-weight: 600; padding: 4px 10px; border-radius: var(--r-chip); }
+.proj__lang.swift { color: #f05138; background: color-mix(in srgb, #f05138 14%, transparent); }
+.proj__lang.ts { color: #3178c6; background: color-mix(in srgb, #3178c6 14%, transparent); }
+.proj__lang.web { color: #e34c26; background: color-mix(in srgb, #e34c26 14%, transparent); }
+.proj__arrow { color: var(--label-3); font-size: var(--t-callout); transition: transform 0.4s var(--ease); }
+.proj:hover .proj__arrow { transform: translate(2px, -2px); }
+.proj h4 { font-size: var(--t-headline); font-weight: 600; letter-spacing: -0.01em; }
+.proj p { color: var(--label-2); font-size: var(--t-footnote); line-height: 1.4; }
+
+@media (max-width: 860px) { .projects__grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 440px) { .projects__grid { grid-template-columns: 1fr; } }
+
+/* =========================================================
    CONTACT
    ========================================================= */
 .contact { text-align: center; }
