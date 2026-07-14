@@ -42,6 +42,7 @@
     <a href="#work">Work</a>
     <a href="#experience">Experience</a>
     <a href="#writing">Writing</a>
+    <a href="#quality">Quality</a>
     <a href="#stack">Stack</a>
     <a href="#projects">Projects</a>
     <a href="https://wa.me/6281298660983" target="_blank" rel="noopener" class="nav__wa" aria-label="WhatsApp">
@@ -63,10 +64,11 @@
   <a href="#work" style="--i:1">Work</a>
   <a href="#experience" style="--i:2">Experience</a>
   <a href="#writing" style="--i:3">Writing</a>
-  <a href="#stack" style="--i:4">Stack</a>
-  <a href="#projects" style="--i:5">Projects</a>
-  <a href="https://wa.me/6281298660983" target="_blank" rel="noopener" style="--i:6">WhatsApp · +62 812-9866-0983</a>
-  <a href="#contact" style="--i:7">Contact</a>
+  <a href="#quality" style="--i:4">Quality</a>
+  <a href="#stack" style="--i:5">Stack</a>
+  <a href="#projects" style="--i:6">Projects</a>
+  <a href="https://wa.me/6281298660983" target="_blank" rel="noopener" style="--i:7">WhatsApp · +62 812-9866-0983</a>
+  <a href="#contact" style="--i:8">Contact</a>
 </div>
 
 <main id="top">
@@ -122,17 +124,17 @@
       <h2>An engineering leader who ships, refactors, <span class="accent">&amp; mentors.</span></h2>
     </div>
     <div class="about__grid">
-      <p class="about__lead reveal">
-        Six-plus years across iOS development, fintech product engineering, and data analytics.
-        I build trading experiences across US Stocks, ID Stocks, Mutual Funds &amp; CFD at one of
-        Indonesia's largest platforms — while mentoring engineers and driving architecture decisions.
-      </p>
-      <p class="about__body reveal">
-        My roots in data analytics at Shopee and Ruangguru taught me to connect technical
-        decisions to business outcomes. Today I combine architectural vision with hands-on depth:
-        mentoring junior-to-mid iOS engineers, running technical interviews from junior through
-        senior, and raising the bar through code review.
-      </p>
+       <p class="about__lead reveal">
+         Six-plus years across iOS development, fintech product engineering, and data analytics.
+         I build trading experiences across US Stocks, ID Stocks, Mutual Funds &amp; CFD at one of
+         Indonesia's largest platforms — while mentoring engineers and driving architecture decisions.
+       </p>
+       <p class="about__body reveal">
+         My roots in data analytics at Shopee and Ruangguru taught me to connect technical
+         decisions to business outcomes. Today I combine architectural vision with hands-on depth:
+         mentoring junior-to-mid iOS engineers, running technical interviews from junior through
+         senior, and raising the bar through code review. I leverage AI coding agents like AntiGravity as force multipliers, operating in a Human-in-the-loop model where I maintain full ownership of code quality and user experience, especially critical for mobile development.
+       </p>
       <ul class="about__pills reveal">
         <li>Real-time trading systems</li>
         <li>TCA architecture</li>
@@ -172,12 +174,68 @@
     </div>
   </section>
 
+  <!-- QUALITY ENGINEERING -->
+  <section class="quality" id="quality">
+    <div class="section-head reveal">
+      <span class="tag">Quality Engineering</span>
+      <h2>Closing the loop with <span class="accent">production observability.</span></h2>
+      <p class="section-sub">Writing code is only half the job. I rely on Sentry to act as a rigorous quality gate, alerting me to production issues early so they can be triaged and fixed before impacting users.</p>
+    </div>
+    
+    <div class="quality__grid">
+      <!-- Workflow Pipeline -->
+      <div class="quality__workflow reveal glass">
+        <h3>The Quality Loop</h3>
+        <div class="pipeline">
+          <div class="pipeline__node">Code</div>
+          <div class="pipeline__node">AI Agent</div>
+          <div class="pipeline__node">Review</div>
+          <div class="pipeline__node">Ship</div>
+          <div class="pipeline__node highlight">Sentry Monitor</div>
+          <div class="pipeline__node">Triage</div>
+          <div class="pipeline__node">Fix</div>
+        </div>
+      </div>
+      
+      <!-- What I monitor -->
+      <div class="quality__monitors reveal">
+        <h3>Active Monitoring &amp; Alerting</h3>
+        <div class="monitor-grid">
+          <div class="monitor-card glass">
+            <span class="monitor-card__ico" aria-hidden="true">✓</span>
+            <h4>Crash-Free Sessions</h4>
+          </div>
+          <div class="monitor-card glass">
+            <span class="monitor-card__ico" aria-hidden="true">⏱</span>
+            <h4>App Hangs &amp; ANR</h4>
+          </div>
+          <div class="monitor-card glass">
+            <span class="monitor-card__ico" aria-hidden="true">⚠</span>
+            <h4>HTTP Client Errors</h4>
+          </div>
+          <div class="monitor-card glass">
+            <span class="monitor-card__ico" aria-hidden="true">⚡</span>
+            <h4>UI Load Performance</h4>
+          </div>
+          <div class="monitor-card glass">
+            <span class="monitor-card__ico" aria-hidden="true">⚙</span>
+            <h4>Main Thread I/O</h4>
+          </div>
+          <div class="monitor-card glass">
+            <span class="monitor-card__ico" aria-hidden="true">🛑</span>
+            <h4>Watchdog Terminations</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- FOCUS AREAS — numbered editorial list (ref: raymondchins.com topics) -->
   <section class="topics" id="focus">
     <div class="section-head reveal">
       <span class="tag">Focus Areas</span>
       <h2>Where I go <span class="accent">deep on iOS.</span></h2>
-      <p class="section-sub">Five domains I design, build, and mentor around — the substance behind the trading surface.</p>
+      <p class="section-sub">Six domains I design, build, and mentor around — the substance behind the trading surface.</p>
     </div>
     <ol class="topic-list">
       <li class="topic reveal glass">
@@ -206,20 +264,28 @@
       </li>
       <li class="topic reveal glass">
         <span class="topic__no mono">04</span>
-        <div class="topic__body">
-          <h3>Observability &amp; Insight</h3>
-          <p>Sentry page-load tracing, alerting baselines, and Mixpanel event design that turns a trading surface data-driven.</p>
-        </div>
-        <span class="topic__tag">Sentry · Mixpanel</span>
+         <div class="topic__body">
+           <h3>Observability &amp; Insight</h3>
+           <p>Sentry page-load tracing, alerting baselines, and Mixpanel event design. Acting as a rigorous quality gate to catch, triage, and fix production issues early.</p>
+         </div>
+         <span class="topic__tag">Sentry · Mixpanel · Quality Gate</span>
       </li>
-      <li class="topic reveal glass">
-        <span class="topic__no mono">05</span>
-        <div class="topic__body">
-          <h3>Mentorship &amp; Craft</h3>
-          <p>Growing junior-to-mid iOS engineers, running technical interviews across levels, and raising the bar through review.</p>
-        </div>
-        <span class="topic__tag">Reviews · Interviews</span>
-      </li>
+       <li class="topic reveal glass">
+         <span class="topic__no mono">05</span>
+         <div class="topic__body">
+           <h3>Mentorship &amp; Craft</h3>
+           <p>Growing junior-to-mid iOS engineers, running technical interviews across levels, and raising the bar through review.</p>
+         </div>
+         <span class="topic__tag">Reviews · Interviews</span>
+       </li>
+       <li class="topic reveal glass">
+         <span class="topic__no mono">06</span>
+         <div class="topic__body">
+           <h3>AI-Powered Development</h3>
+           <p>Heavy experience with AI coding agents (AntiGravity) integrated deeply with my Sentry quality loop: code → AI agent → review → ship → Sentry monitor → triage. From TDD implementation to agent-driven code reviews.</p>
+         </div>
+         <span class="topic__tag">AntiGravity · Sentry Quality Loop · TDD</span>
+       </li>
     </ol>
   </section>
 
@@ -228,7 +294,7 @@
     <div class="section-head reveal">
       <span class="tag">Selected Work</span>
       <h2>Shipped across <span class="accent">four markets</span> at Ajaib.</h2>
-      <p class="section-sub">US Stocks, ID Stocks, Mutual Funds &amp; CFD — features and systems I designed and delivered end-to-end.</p>
+      <p class="section-sub">US Stocks, ID Stocks, Mutual Funds &amp; CFD — features and systems I designed, delivered, and shipped safely in production.</p>
     </div>
 
     <div class="bento">
@@ -236,7 +302,7 @@
         <div class="card__inner">
           <div class="card__top">
             <span class="card__kicker">Flagship feature · end-to-end</span>
-            <span class="card__badge live">Shipped</span>
+            <span class="card__badge live">Shipped safely</span>
           </div>
           <h3>Take Profit / Stop Loss</h3>
           <p>Owned TP/SL from tech spec to production — core ViewModel logic, the Buy-Limit order section, and full portfolio-level create / edit / cancel flows. Automated risk management for every US Stocks trader.</p>
@@ -255,7 +321,10 @@
 
       <article class="card glass reveal">
         <div class="card__inner">
-          <span class="card__kicker">Order lifecycle</span>
+          <div class="card__top">
+            <span class="card__kicker">Order lifecycle</span>
+            <span class="card__badge live">Shipped safely</span>
+          </div>
           <h3>Amend Order Flow</h3>
           <p>Buy &amp; sell order amendment built on a unified TCA store — entry point, value carry-over &amp; calculation logic, and a gradual rollout config.</p>
           <div class="card__meta"><span>Buy</span><span>Sell</span><span>Gradual rollout</span></div>
@@ -264,7 +333,10 @@
 
       <article class="card glass reveal">
         <div class="card__inner">
-          <span class="card__kicker">Real-time data</span>
+          <div class="card__top">
+            <span class="card__kicker">Real-time data</span>
+            <span class="card__badge live">Shipped safely</span>
+          </div>
           <h3>Live Price Sockets</h3>
           <p>Multi-source WebSocket pipeline for ID &amp; US markets. Fixed bid/ask freezes, out-of-hours socket behaviour, and built a SPY real-time chart proof-of-concept.</p>
           <div class="card__meta"><span>WebSocket</span><span>Combine</span><span>SPY PoC</span></div>
@@ -273,7 +345,10 @@
 
       <article class="card glass reveal">
         <div class="card__inner">
-          <span class="card__kicker">Architecture</span>
+          <div class="card__top">
+            <span class="card__kicker">Architecture</span>
+            <span class="card__badge live">Shipped safely</span>
+          </div>
           <h3>TCA Store Unification</h3>
           <p>Proposed and led a refactor unifying The Composable Architecture store patterns across the US Stocks app — plus a new navigation &amp; bottom-sheet system.</p>
           <div class="card__meta"><span>Refactor</span><span>Navigation</span></div>
@@ -282,16 +357,22 @@
 
       <article class="card card--wide glass reveal">
         <div class="card__inner">
-          <span class="card__kicker">Observability</span>
+          <div class="card__top">
+            <span class="card__kicker">Observability</span>
+            <span class="card__badge live">Shipped safely</span>
+          </div>
           <h3>Performance Instrumentation</h3>
-          <p>Sentry page-load tracking on the Detail &amp; Trade pages, base metrics for alerting, and Mixpanel event trackers — turning the trading surface observable and data-driven.</p>
-          <div class="card__meta"><span>Sentry</span><span>Mixpanel</span><span>P95 Alerting</span></div>
+          <p>Error monitoring across multiple apps, Sentry page-load tracking on core trading flows, base metrics for alerting, and Mixpanel event trackers — turning the trading surface observable and data-driven.</p>
+          <div class="card__meta"><span>Sentry</span><span>Error Monitoring</span><span>Mixpanel</span><span>P95 Alerting</span></div>
         </div>
       </article>
 
       <article class="card glass reveal">
         <div class="card__inner">
-          <span class="card__kicker">First-month win</span>
+          <div class="card__top">
+            <span class="card__kicker">First-month win</span>
+            <span class="card__badge live">Shipped safely</span>
+          </div>
           <h3>Stock Transfer</h3>
           <p>Shipped the Stockbit stock-transfer flow within my first month — from spec and unit tests to production.</p>
           <div class="card__meta"><span>Ship-fast</span><span>Unit tested</span></div>
@@ -300,7 +381,10 @@
 
       <article class="card glass reveal">
         <div class="card__inner">
-          <span class="card__kicker">Products</span>
+          <div class="card__top">
+            <span class="card__kicker">Products</span>
+            <span class="card__badge live">Shipped safely</span>
+          </div>
           <h3>Options &amp; Derivatives</h3>
           <p>US Stock Options and CFD groundwork — searchable options, expiry-with-timestamp handling, and contract detail refinements.</p>
           <div class="card__meta"><span>Options</span><span>CFD</span></div>
@@ -312,7 +396,7 @@
         <div class="card__inner">
           <div class="card__top">
             <span class="card__kicker">ID Stocks — 55 tasks shipped</span>
-            <span class="card__badge live">Shipped</span>
+            <span class="card__badge live">Shipped safely</span>
           </div>
           <h3>Stock Lite &amp; Pro Trading</h3>
           <p>Led Stock Lite/Pro mode, trading limits (TL), fractional &amp; GTC orders, and post-order UX — reshaping how millions trade ID Stocks.</p>
@@ -322,7 +406,10 @@
 
       <article class="card glass reveal">
         <div class="card__inner">
-          <span class="card__kicker">ID Stocks — Beta platform</span>
+          <div class="card__top">
+            <span class="card__kicker">ID Stocks — Beta platform</span>
+            <span class="card__badge live">Shipped safely</span>
+          </div>
           <h3>Project Beta: SDP &amp; Market</h3>
           <p>Seasonality charts &amp; filters, stock comparison with add/search/tracking, broker summary &amp; flow, screener entry points, and running trade module.</p>
           <div class="card__meta"><span>Seasonality</span><span>Comparison</span><span>Broker</span><span>Screener</span></div>
@@ -331,7 +418,10 @@
 
       <article class="card glass reveal">
         <div class="card__inner">
-          <span class="card__kicker">ID Stocks — Advanced orders</span>
+          <div class="card__top">
+            <span class="card__kicker">ID Stocks — Advanced orders</span>
+            <span class="card__badge live">Shipped safely</span>
+          </div>
           <h3>Short Sell &amp; Collateral</h3>
           <p>IDSS Short Sell, margin ratio display on order page, collateral transfer from Regular to IDSS account, and IDSS activation flows.</p>
           <div class="card__meta"><span>Short Sell</span><span>Margin Ratio</span><span>Collateral Transfer</span></div>
@@ -340,7 +430,10 @@
 
       <article class="card glass reveal">
         <div class="card__inner">
-          <span class="card__kicker">ID Stocks — US Stock bridge</span>
+          <div class="card__top">
+            <span class="card__kicker">ID Stocks — US Stock bridge</span>
+            <span class="card__badge live">Shipped safely</span>
+          </div>
           <h3>Cross-Market Features</h3>
           <p>US Stocks Watchlist on the Blue App, RDN buying power, 24/7 order visibility, full US Stocks listing, and KYC tracker integration.</p>
           <div class="card__meta"><span>Watchlist</span><span>RDN BP</span><span>Index ETF</span><span>Alpha Widget</span></div>
@@ -349,7 +442,10 @@
 
       <article class="card card--stat glass reveal">
         <div class="card__inner">
-          <span class="card__kicker">Buy &amp; Sell refactor</span>
+          <div class="card__top">
+            <span class="card__kicker">Buy &amp; Sell refactor</span>
+            <span class="card__badge live">Shipped safely</span>
+          </div>
           <div class="bigstat">
             <span class="bigstat__num" data-count="21" data-suffix="%">21%</span>
             <span class="bigstat__label">faster load</span>
@@ -376,12 +472,13 @@
             <span class="tl__co">Ajaib</span>
             <span class="tl__date">Mar 2024 — Present</span>
           </div>
-          <p>Building and scaling one of Indonesia’s largest trading platforms. End-to-end feature ownership across US Stocks, ID Stocks, Mutual Funds &amp; CFD.</p>
-          <ul>
-            <li>Architected new modules — Stock Lite, Copy Trade, Bundle Trade, Fast Trade, Collateral — and advanced order types (GTC, Short Sell, Options, Limit).</li>
-            <li>P95 app-start of 2s and 99% crash-free on Ajaib &amp; Ajaib Alpha; code smells kept &lt;5% (SonarQube) with 90%+ coverage.</li>
-            <li>Boosted Mutual Funds rendering with Texture; built Firebase Remote Config marketing campaigns; mentor engineers and run technical interviews.</li>
-          </ul>
+           <p>Building and scaling one of Indonesia’s largest trading platforms. End-to-end feature ownership across US Stocks, ID Stocks, Mutual Funds &amp; CFD.</p>
+           <ul>
+             <li>Architected new modules — Stock Lite, Copy Trade, Bundle Trade, Fast Trade, Collateral — and advanced order types (GTC, Short Sell, Options, Limit).</li>
+             <li>P95 app-start of 2s and 99% crash-free on Ajaib &amp; Ajaib Alpha; code smells kept &lt;5% (SonarQube) with 90%+ coverage.</li>
+             <li>Boosted Mutual Funds rendering with Texture; built Firebase Remote Config marketing campaigns; mentor engineers and run technical interviews.</li>
+             <li>Human-in-the-loop AI development: use AntiGravity agent to accelerate implementation while maintaining strict manual review for code quality and mobile UX excellence.</li>
+           </ul>
         </div>
       </li>
 

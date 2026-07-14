@@ -437,7 +437,7 @@ section { max-width: var(--maxw); margin: 0 auto; padding: 5rem 24px; }
 .card__inner { height: 100%; border-radius: 21px;   /* concentric: 28 panel − 7 padding */ padding: 24px;
   background: linear-gradient(180deg, color-mix(in srgb, var(--glass-fill) 40%, transparent), transparent);
   box-shadow: inset 0 1px 0 var(--specular-top); display: flex; flex-direction: column; }
-.card__top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 4px; }
+.card__top { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; flex-wrap: wrap; margin-bottom: 4px; }
 .card__kicker { font-size: var(--t-caption); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--blue); }
 .card h3 { font-size: var(--t-title3); font-weight: 600; margin: 10px 0 8px; letter-spacing: -0.02em; }
 .card p { color: var(--label-2); font-size: var(--t-subhead); line-height: 1.45; }
@@ -562,6 +562,28 @@ section { max-width: var(--maxw); margin: 0 auto; padding: 5rem 24px; }
   display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;
   border-top: 0.5px solid var(--separator); color: var(--label-3); font-size: var(--t-footnote); }
 .footer__mono { font-size: var(--t-caption); }
+
+/* =========================================================
+   QUALITY ENGINEERING
+   ========================================================= */
+.quality__grid { display: grid; gap: 3rem; margin-top: 2rem; }
+
+.quality__workflow { padding: clamp(1.8rem, 3vw, 2.5rem); border-radius: var(--r-panel); }
+.quality__workflow h3 { font-size: var(--t-title3); font-weight: 600; margin-bottom: 1.4rem; color: var(--label); }
+.pipeline { display: flex; align-items: center; gap: 8px 12px; flex-wrap: wrap; }
+.pipeline__node { font-size: var(--t-caption); font-weight: 600; padding: 10px 16px; border-radius: var(--r-pill); background: var(--glass-fill-thin); color: var(--label-2); border: 0.5px solid var(--glass-border); transition: transform 0.3s var(--ease), color 0.3s var(--ease); box-shadow: inset 0 1px 0 var(--specular-top); text-transform: uppercase; letter-spacing: 0.04em; display: flex; align-items: center; gap: 8px; }
+.pipeline__node:not(:last-child)::after { content: "→"; font-size: 14px; opacity: 0.5; font-weight: 400; text-transform: none; position: absolute; right: -18px; pointer-events: none; }
+.pipeline__node.highlight { background: var(--blue); color: var(--on-accent); border-color: var(--blue); box-shadow: inset 0 1px 0 rgba(255,255,255,0.4), 0 4px 16px color-mix(in srgb, var(--blue) 40%, transparent); }
+.pipeline__node.highlight::after { display: none; } /* Handle arrow spacing manually if needed, or rely on gap */
+.pipeline__node:not(:last-child) { margin-right: 14px; }
+
+.quality__monitors { padding: 0.5rem 0; }
+.quality__monitors h3 { font-size: var(--t-title3); font-weight: 600; margin-bottom: 1.4rem; color: var(--label); }
+.monitor-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; }
+.monitor-card { display: flex; align-items: center; gap: 14px; padding: 16px 20px; border-radius: var(--r-inner); background: color-mix(in srgb, var(--wall-bg) 60%, transparent); transition: transform 0.4s var(--ease); border: 0.5px solid var(--glass-border); box-shadow: inset 0 1px 0 var(--specular-top); }
+.monitor-card:hover { transform: translateY(-3px); background: color-mix(in srgb, var(--wall-bg) 80%, transparent); }
+.monitor-card__ico { display: flex; align-items: center; justify-content: center; width: 34px; height: 34px; border-radius: var(--r-chip); background: color-mix(in srgb, var(--blue) 14%, transparent); color: var(--blue); font-size: 1.1rem; flex-shrink: 0; }
+.monitor-card h4 { font-size: var(--t-subhead); font-weight: 600; line-height: 1.3; margin: 0; }
 
 /* =========================================================
    REVEAL
